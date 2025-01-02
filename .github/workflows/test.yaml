@@ -5,10 +5,6 @@ on:
     branches:
       - main
 
-  pull_request:
-    branches:
-      - main
-
 permissions:
   contents: read       # allows the workflow to read the repository contents.
   actions: read        # allows the workflow to read the GitHub Actions metadata file.

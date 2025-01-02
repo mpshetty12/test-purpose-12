@@ -1,0 +1,24 @@
+name: Terraform
+
+on:
+  push:
+    branches:
+      - main
+
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read       # allows the workflow to read the repository contents.
+  actions: read        # allows the workflow to read the GitHub Actions metadata file.
+  id-token: write      # allows the workflow to generate an ID JWT token.
+  pull-requests: write # allows the workflow to create a comment on the pull request.
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
